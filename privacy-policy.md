@@ -28,4 +28,4 @@ That’s all we collect in the normal course of business. From time to time, we 
 
 We'll never share any of this information with a third party, except as required by law.
 
-_This policy is effective as of 1 October 2019_
+_The effective date of this policy, as well as its history, can be viewed by pressing the "history" button at the top_
