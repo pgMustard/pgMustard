@@ -16,7 +16,10 @@ We need these to provide the performance analysis that is our service.
 
 They go to our server (in the Google Cloud data centre in Finland) to be processed, but we don’t store them unless you tick the box on the account page allowing us to - we don’t even log them if they cause an exception.
 
-If you do tick that box, we’ll use the plans to improve the product - which basically involves Dave & Mike putting the plan back into the product, looking at the results, and then working out if it did a good job, or if there’s something we need to improve.
+If you do tick that box, we’ll use the plans to improve the product. So far, we have used them for:
+- Putting the plan back into the product, looking at the results, and seeing how we could improve them. We do this pretty regularly and are still small enough that we have time to look through every single stored plan to see if we could have handled it better.
+- Statistical analysis to answer questions like "How long are InitPlan nodes in general?".
+- Understanding the format of EXPLAIN output, for example learning about new fields we haven't seen before, or which fields can reference subplans.
 
 ### Billing information
 
