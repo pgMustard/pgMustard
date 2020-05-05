@@ -26,6 +26,6 @@ We need these pieces of information to take payments. They’re managed and stor
 
 That’s all we collect in the normal course of business. From time to time, we might collect other information about you, for example your t-shirt size and the address you’d like a pgMustard t-shirt sent to. You’ll know if and when this happens, because you’ll be filling in a form or replying to an email that says, for example, “what’s your t-shirt size?”. We store this information in SurveyMonkey, Google docs, and any correspondence we receive from you. We try not to hang onto it for any longer than necessary - for example once we’ve sent you a t-shirt, we’ll delete your address from our records.
 
-We'll never share any of this information with a third party, except as required by law.
+We'll never share any of this information with a third party, except with your express permission or as required by law.
 
 _The effective date of this policy, as well as its history, can be viewed by pressing the "history" button at the top_
