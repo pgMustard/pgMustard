@@ -25,6 +25,10 @@ If you do tick that box, we’ll use the plans to improve the product. So far, w
 
 We need these pieces of information to take payments. They’re managed and stored by our billing, payments and accounts providers (at the time of writing these are Stripe and Quaderno, but we reserve the right to change these without notice).
 
+### Technical information
+
+In order to serve web requests, our load balancer needs technical information, such as browser agent and IP address, which it records in its logs. These aren't something we look at much in the normal course of business, although they can be useful for resolving bugs on occasion - for example, determining whether an issue is browser-specific. On balance, we'd probably rather it didn't log this information, but these logs are purged after six weeks.
+
 ### Other stuff
 
 That’s all we collect in the normal course of business. From time to time, we might collect other information about you, for example your t-shirt size and the address you’d like a pgMustard t-shirt sent to. You’ll know if and when this happens, because you’ll be filling in a form or replying to an email that says, for example, “what’s your t-shirt size?”. We store this information in SurveyMonkey, Google docs, and any correspondence we receive from you. We try not to hang onto it for any longer than necessary - for example once we’ve sent you a t-shirt, we’ll delete your address from our records.
