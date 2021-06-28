@@ -21,6 +21,12 @@ If you do tick that box, we’ll use the plans to improve the product. So far, w
 - Statistical analysis to answer questions like "How long are InitPlan nodes in general?".
 - Understanding the format of EXPLAIN output, for example learning about new fields we haven't seen before, or which fields can reference subplans.
 
+### Published query plans
+
+If you choose to publish a query plan to the general public, it will be stored in our cloud storage (which is also in the Google Cloud data centre in Finland) and made available for anyone to see - whether or not they are logged into pgMustard.
+
+These plans shouldn't be indexed by search engines, and they can be deleted by their publisher at any time, after which the published plan will no longer be available on pgMustard.com. However it is safest to assume that third party web crawlers will have made copies of anything that has been freely available on the open internet. Please think carefully about the sensitivity of the data in any plan before you publish it, and if you do accidentally publish security-critical information, assume it has been compromised and make necessary allowances.
+
 ### Billing information
 
 We need these pieces of information to take payments. They’re managed and stored by our billing, payments and accounts providers (at the time of writing these are Stripe and Quaderno, but we reserve the right to change these without notice).
