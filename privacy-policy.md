@@ -17,7 +17,7 @@ We need these to provide the performance analysis that is our service.
 They go to our server (in the Google Cloud data centre in Finland) to be processed, but we don’t store them unless you tick the box on the account page allowing us to - we don’t even log them if they cause an exception.
 
 If you do tick that box, we’ll use the plans to improve the product. So far, we have used them for:
-- Putting the plan back into the product, looking at the results, and seeing how we could improve them. We do this pretty regularly and are still small enough that we have time to look through every single stored plan to see if we could have handled it better.
+- Putting the plan back into the product, looking at the results, and seeing how we could improve them. We do this pretty regularly.
 - Statistical analysis to answer questions like "How long are InitPlan nodes in general?".
 - Understanding the format of EXPLAIN output, for example learning about new fields we haven't seen before, or which fields can reference subplans.
 
@@ -37,7 +37,7 @@ In order to serve web requests, our load balancer needs technical information, s
 
 ### Other stuff
 
-That’s all we collect in the normal course of business. From time to time, we might collect other information about you, for example your t-shirt size and the address you’d like a pgMustard t-shirt sent to. You’ll know if and when this happens, because you’ll be filling in a form or replying to an email that says, for example, “what’s your t-shirt size?”. We store this information in SurveyMonkey, Google docs, and any correspondence we receive from you. We try not to hang onto it for any longer than necessary - for example once we’ve sent you a t-shirt, we’ll delete your address from our records.
+That’s all we collect in the normal course of business. From time to time, we might collect other information about you, for example your t-shirt size and the address you’d like a pgMustard t-shirt sent to. You’ll know if and when this happens, because you’ll be filling in a form or replying to an email that says, for example, “what’s your t-shirt size?”. We store this information in Google Sheets, and any correspondence we receive from you. We try not to hang onto it for any longer than necessary - for example once we’ve sent you a t-shirt, we’ll delete your address from our records.
 
 We'll never share any of this information with a third party, except with your express permission or as required by law.
 
