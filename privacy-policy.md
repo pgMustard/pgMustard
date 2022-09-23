@@ -8,7 +8,7 @@ We need these to identify and contact you about the service.
 
 They’re stored in our database (hosted in Finland), in Mailchimp, in any correspondence that we receive from you, and in documents on Google Sheets. 
 
-If you cease to be a customer, we’ll remove most of these references, but we’ll keep the ones that are needed to  hold a record of the service we provided to you - for example correspondence requesting us to cancel your subscription, or an entry in the database which records that you have used your free trial and are no longer entitled to one.
+If you cease to be a customer, we’ll remove most of these references, but we’ll keep the ones that are needed to hold a record of the service we provided to you - for example correspondence requesting us to cancel your subscription, or an entry in the database which records that you have used your free trial and are no longer entitled to one.
 
 ### Query plans
 
@@ -21,11 +21,13 @@ If you do tick that box, we’ll use the plans to improve the product. So far, w
 - Statistical analysis to answer questions like "How long are InitPlan nodes in general?".
 - Understanding the format of EXPLAIN output, for example learning about new fields we haven't seen before, or which fields can reference subplans.
 
-### Published query plans
+### Saved and published query plans
 
-If you choose to publish a query plan to the general public, it will be stored in our cloud storage (which is also in the Google Cloud data centre in Finland) and made available for anyone to see - whether or not they are logged into pgMustard.
+If you choose to save or publish a query plan, it will be stored in our cloud storage (which is also in the Google Cloud data centre in Finland).
 
-These plans shouldn't be indexed by search engines, and they can be deleted by their publisher at any time, after which the published plan will no longer be available on pgMustard.com. However it is safest to assume that third party web crawlers will have made copies of anything that has been freely available on the open internet. Please think carefully about the sensitivity of the data in any plan before you publish it, and if you do accidentally publish security-critical information, assume it has been compromised and make necessary allowances.
+Saved plans are private to your account, whereas published plans are made available for anyone to see — whether or not they are signed in to pgMustard.
+
+Published plans shouldn't be indexed by search engines, and they can be deleted by their publisher at any time, after which the published plan will no longer be available on pgMustard.com. However it is safest to assume that third party web crawlers will have made copies of anything that has been freely available on the open internet. Please think carefully about the sensitivity of the data in any plan before you publish it, and if you do accidentally publish security-critical information, assume it has been compromised and make necessary allowances.
 
 ### Billing information
 
