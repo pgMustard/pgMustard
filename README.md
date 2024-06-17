@@ -8,4 +8,4 @@ If you’d like a less noisy way to stay in the loop with updates, we have a [mo
 
 [1]: https://www.pgmustard.com/newsletter/
 [2]: https://twitter.com/pgMustard/
-[3]: https://github.com/pgMustard/pgMustard/projects/1
+[3]: https://github.com/orgs/pgMustard/projects/1/views/1
