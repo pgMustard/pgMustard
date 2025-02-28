@@ -1,0 +1,65 @@
+																																																														  QUERY PLAN                                                                                                                                                                                                                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop Left Join  (cost=31.34..53.33 rows=15 width=288) (actual time=1.836..15.138 rows=154 loops=1)
+   Output: n.nspname, c.relname, i.relname, t.spcname, pg_get_indexdef(i.oid)
+   Inner Unique: true
+   Buffers: shared hit=5509 read=30
+   ->  Hash Left Join  (cost=31.20..52.40 rows=15 width=200) (actual time=0.467..0.890 rows=154 loops=1)
+		 Output: c.relname, i.relname, i.oid, i.reltablespace, n.nspname
+		 Inner Unique: true
+		 Hash Cond: (c.relnamespace = n.oid)
+		 Buffers: shared hit=34
+		 ->  Hash Join  (cost=30.00..51.14 rows=15 width=140) (actual time=0.439..0.801 rows=154 loops=1)
+			   Output: c.relname, c.relnamespace, i.relname, i.oid, i.reltablespace
+			   Hash Cond: (i.oid = x.indexrelid)
+			   Buffers: shared hit=33
+			   ->  Seq Scan on pg_catalog.pg_class i  (cost=0.00..20.23 rows=204 width=72) (actual time=0.031..0.288 rows=204 loops=1)
+					 Output: i.oid, i.relname, i.relnamespace, i.reltype, i.reloftype, i.relowner, i.relam, i.relfilenode, i.reltablespace, i.relpages, i.reltuples, i.relallvisible, i.reltoastrelid, i.relhasindex, i.relisshared, i.relpersistence, i.relkind, i.relnatts, i.relchecks, i.relhasrules, i.relhastriggers, i.relhassubclass, i.relrowsecurity, i.relforcerowsecurity, i.relispopulated, i.relreplident, i.relispartition, i.relrewrite, i.relfrozenxid, i.relminmxid, i.relacl, i.reloptions, i.relpartbound
+					 Filter: (i.relkind = ANY ('{i,I}'::"char"[]))
+					 Rows Removed by Filter: 295
+					 Buffers: shared hit=14
+			   ->  Hash  (cost=29.54..29.54 rows=37 width=72) (actual time=0.394..0.395 rows=154 loops=1)
+					 Output: x.indexrelid, c.relname, c.relnamespace
+					 Buckets: 1024  Batches: 1  Memory Usage: 24kB
+					 Buffers: shared hit=19
+					 ->  Hash Join  (cost=21.97..29.54 rows=37 width=72) (actual time=0.261..0.354 rows=154 loops=1)
+						   Output: x.indexrelid, c.relname, c.relnamespace
+						   Inner Unique: true
+						   Hash Cond: (x.indrelid = c.oid)
+						   Buffers: shared hit=19
+						   ->  Seq Scan on pg_catalog.pg_index x  (cost=0.00..7.03 rows=203 width=8) (actual time=0.008..0.038 rows=204 loops=1)
+								 Output: x.indexrelid, x.indrelid, x.indnatts, x.indnkeyatts, x.indisunique, x.indnullsnotdistinct, x.indisprimary, x.indisexclusion, x.indimmediate, x.indisclustered, x.indisvalid, x.indcheckxmin, x.indisready, x.indislive, x.indisreplident, x.indkey, x.indcollation, x.indclass, x.indoption, x.indexprs, x.indpred
+								 Buffers: shared hit=5
+						   ->  Hash  (cost=20.85..20.85 rows=90 width=72) (actual time=0.232..0.232 rows=89 loops=1)
+								 Output: c.relname, c.oid, c.relnamespace
+								 Buckets: 1024  Batches: 1  Memory Usage: 18kB
+								 Buffers: shared hit=14
+								 ->  Seq Scan on pg_catalog.pg_class c  (cost=0.00..20.85 rows=90 width=72) (actual time=0.005..0.202 rows=89 loops=1)
+									   Output: c.relname, c.oid, c.relnamespace
+									   Filter: (c.relkind = ANY ('{r,m,p}'::"char"[]))
+									   Rows Removed by Filter: 410
+									   Buffers: shared hit=14
+		 ->  Hash  (cost=1.09..1.09 rows=9 width=68) (actual time=0.015..0.015 rows=9 loops=1)
+			   Output: n.nspname, n.oid
+			   Buckets: 1024  Batches: 1  Memory Usage: 9kB
+			   Buffers: shared hit=1
+			   ->  Seq Scan on pg_catalog.pg_namespace n  (cost=0.00..1.09 rows=9 width=68) (actual time=0.006..0.009 rows=9 loops=1)
+					 Output: n.nspname, n.oid
+					 Buffers: shared hit=1
+   ->  Memoize  (cost=0.14..0.21 rows=1 width=68) (actual time=0.000..0.000 rows=0 loops=154)
+		 Output: t.spcname, t.oid
+		 Cache Key: i.reltablespace
+		 Cache Mode: logical
+		 Hits: 152  Misses: 2  Evictions: 0  Overflows: 0  Memory Usage: 1kB
+		 Buffers: shared hit=3
+		 ->  Index Scan using pg_tablespace_oid_index on pg_catalog.pg_tablespace t  (cost=0.13..0.20 rows=1 width=68) (actual time=0.003..0.003 rows=0 loops=2)
+			   Output: t.spcname, t.oid
+			   Index Cond: (t.oid = i.reltablespace)
+			   Buffers: shared hit=3
+ Planning:
+   Buffers: shared hit=258 read=50
+   Memory: used=225kB  allocated=256kB
+ Planning Time: 11.538 ms
+ Serialization: time=0.098 ms  output=25kB  format=text
+ Execution Time: 15.574 ms
+(62 rows)
