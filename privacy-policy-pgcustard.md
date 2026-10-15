@@ -18,7 +18,7 @@ We need these to collect metrics from your databases: the host, port, database n
 
 Every 30 seconds we read Postgres’s statistics views and catalogs: things like schema, table, and index names, sizes, settings, and activity counts, plus normalised query text from `pg_stat_statements`. We ask you to connect us with a role that has `pg_monitor`, which can read statistics but not the data in your tables.
 
-Metrics are stored in our database in the Google Cloud data centre in Finland. Most are kept for around 100 days, and table events (such as vacuums) for 400 days. Query text, weekly summaries, and alerts are kept until you remove the database.
+Metrics are processed under our [data processing agreement](https://pgcustard.com/dpa), and stored in our database in the Google Cloud data centre in Finland. Most are kept for around 100 days, and table events (such as vacuums) for 400 days. Query text, weekly summaries, and alerts are kept until you remove the database.
 
 ### Emails
 
