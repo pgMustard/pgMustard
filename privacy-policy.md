@@ -35,7 +35,7 @@ We need these pieces of information to take payments. They’re managed and stor
 
 ### Technical information
 
-In order to serve web requests, our load balancer needs technical information, such as browser agent and IP address, which it records in its logs. These aren't something we look at much in the normal course of business, although they can be useful for resolving bugs on occasion - for example, determining whether an issue is browser-specific. On balance, we'd probably rather it didn't log this information, but these logs are purged after six weeks. Our websites are hosted by Squarespace (pgmustard.com) and Cloudflare (pgcustard.com), which also process this information.
+In order to serve web requests, our load balancer needs technical information, such as browser agent and IP address, which it records in its logs. These aren't something we look at much in the normal course of business, although they can be useful for resolving bugs on occasion - for example, determining whether an issue is browser-specific. On balance, we'd probably rather it didn't log this information, but these logs are purged after six weeks. Our website, pgmustard.com, is hosted by Squarespace and uses Fathom Analytics, which doesn't use cookies. Both also process your browser agent and IP address.
 
 ### Other stuff
 
