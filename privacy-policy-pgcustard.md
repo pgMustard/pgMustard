@@ -24,6 +24,10 @@ Metrics are processed under our [data processing agreement](https://pgcustard.co
 
 We email weekly summaries and alerts to members of your organisation, sent through Mailchimp Transactional. These contain similar information to the app, such as object names and normalised query text. We don’t track whether emails are opened or links clicked.
 
+### Payments
+
+We use Stripe to take payments. When you subscribe, they collect your card details, billing address, and your VAT number if you give one. We pass them your organisation’s name and your email address, and we never see your card number.
+
 ### Technical information
 
 To serve web requests, Google Cloud records technical information such as your IP address and browser agent. Our logs also record errors, which can include your database’s host name, for example when we can’t reach it. Logs are deleted after 30 days.
