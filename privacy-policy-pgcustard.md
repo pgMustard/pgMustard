@@ -8,7 +8,7 @@ When you use hosted pgCustard (app.pgcustard.com), we collect, store, and use th
 
 We need this to email you about your databases. When you sign in with Google or GitHub, they tell us your email address and an account ID, which we use to recognise you. We store both in our database (hosted in Finland), but not your name or a password.
 
-If you email us or book a call, your details will also be in Google Workspace and SavvyCal respectively.
+If you email us or book a call, your details will also be in Google Workspace and SavvyCal respectively. If you subscribe to pgMustard’s newsletter, your email address will be in Mailchimp too.
 
 ### Database connection details
 
@@ -22,7 +22,7 @@ Metrics are processed under our [data processing agreement](https://pgcustard.co
 
 ### Emails
 
-We email weekly summaries and alerts to members of your organisation, sent through Mailchimp Transactional. These contain similar information to the app, such as object names and normalised query text. We don’t track whether emails are opened or links clicked.
+We email weekly summaries and alerts to members of your organisation, invitations to the people your admins invite, and billing notices to admins, all through Mailchimp Transactional. These contain similar information to the app, such as object names and normalised query text. An invitation includes the email address of the admin who sent it. We don’t track whether emails are opened or links clicked.
 
 ### Payments
 
@@ -36,11 +36,11 @@ We use two cookies: one to keep you signed in, for 30 days, and one that lasts t
 
 ### If you leave
 
-After you cancel your pgCustard subscription, we’ll keep everything for 7 days, just in case. Within a week after that, we’ll delete your data and your account, keeping only what we need to hold a record of the service we provided to you. If you’d like us to delete anything sooner, just ask.
+After you cancel your pgCustard subscription, we’ll keep everything for 7 days, just in case. Within a week after that, we’ll delete your data and your account (unless you belong to another organisation), keeping only what we need to hold a record of the service we provided to you. If your organisation never subscribes, we delete it 30 days after it was created. If you belong to no organisation, we delete your account after 30 days without a sign-in. If you’d like us to delete anything sooner, just ask.
 
 ### Self-hosted
 
-If you run pgCustard yourself, your metrics stay in your own database and are never sent to us. To let your server download new versions from our image registry (Google Artifact Registry), we give you a key named after your company. Google sees these downloads, including the IP address they come from, but we don’t log them.
+If you run pgCustard yourself, your metrics stay in your own database and are never sent to us. To let your server download new versions from our image registry (Google Artifact Registry), we give you a key named after your company. We log each download, including the version and the IP address it came from, and delete those logs after 30 days.
 
 ### Your rights
 
@@ -48,6 +48,6 @@ We use this information to provide pgCustard and keep it secure. Most of the ser
 
 If you’re unhappy with how we handle your information, please tell us, and we’ll do our best to put it right. You can also contact your local data protection authority.
 
-You can ask us for a copy of your personal information, or ask us to correct or delete it, by emailing hello@pgmustard.com.
+You can ask us for a copy of your personal information, or ask us to correct or delete it, by emailing hello@pgcustard.com.
 
 _The effective date of this policy, as well as its history, can be viewed by pressing the "history" button at the top_
