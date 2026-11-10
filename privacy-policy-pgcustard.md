@@ -8,7 +8,7 @@ When you use hosted pgCustard (app.pgcustard.com), we collect, store, and use th
 
 We need this to email you about your databases. When you sign in with Google or GitHub, they tell us your email address and an account ID, which we use to recognise you. We store both in our database (hosted in Finland), but not your name or a password.
 
-If you email us or book a call, your details will also be in Google Workspace and SavvyCal respectively. If you subscribe to pgMustard’s newsletter, your email address will be in Mailchimp too.
+If you email us or book a call, your details will also be in Google Workspace and SavvyCal respectively. If you fill in a form on our website, it emails your answers to us through Mailchimp Transactional. If you subscribe to pgMustard’s newsletter, your email address will be in Mailchimp too.
 
 ### Database connection details
 
